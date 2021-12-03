@@ -12,14 +12,13 @@ AGENTE
 
 
 	Ahi se deberá de poner el archivo agente.py y se ejecutará con el siguiente script:
-
-		*NOTA: Antes de ejecutar el archivo, se debe poner la ip del servidor donde se vaya a ejecutar el API centralizadora en el apartado de host
-		
-
+		*NOTA: Antes de ejecutar el archivo, se debe poner la ip del servidor donde se vaya a ejecutar el API centralizadora en el apartado de host	
+		*NOTA: Se deberá ejecutar cada que se necesite la información.
+			
+			Script:
 				python3 agente.py
 
-				
-		*Nota: Se deberá ejecutar cada que se necesite la información.
+		
 
 
 SERVIDOR CENTRALIZADOR
@@ -35,9 +34,9 @@ SERVIDOR CENTRALIZADOR
  
 		*NOTA: Antes de ejecutar el archivo, se debe poner la IP del servidor donde se vaya a ejecutar el API centralizadora en el apartado de host.
 
-		- Se ejecuta el API:
+				- Se ejecuta el API:
 
-		python3 app.py
+					python3 app.py
 
 
 
