@@ -1,0 +1,52 @@
+Instrucciones:
+
+Antes de este archivo, deberas de seguir las instrucciones del archivo de dependencias:
+
+dependencias.txt
+
+AGENTE
+
+*Se genera la carpeta en la carpeta raiz con el siguiente comando:
+
+	mkdir Agente_servidor
+
+
+	Ahi se deberá de poner el archivo agente.py y se ejecutará con el siguiente script:
+
+		*NOTA: Antes de ejecutar el archivo, se debe poner la ip del servidor donde se vaya a ejecutar el API centralizadora en el apartado de host
+		
+
+				python3 agente.py
+
+				
+		*Nota: Se deberá ejecutar cada que se necesite la información.
+
+
+SERVIDOR CENTRALIZADOR
+
+*Para levantar el servidor y que se pueda enviar la información, se necesita ejecutar el archivo app.py:
+
+
+  - Primero se necesita genera la carpeta en la carpeta raiz con el siguiente comando:
+
+		mkdir Servidor_centralizador
+
+	Ahi se deberá de poner el archivo app.py y la carpeta templates con el index.html:
+ 
+		*NOTA: Antes de ejecutar el archivo, se debe poner la IP del servidor donde se vaya a ejecutar el API centralizadora en el apartado de host.
+
+		- Se ejecuta el API:
+
+		python3 app.py
+
+
+
+
+
+Para poder visualizar el contenido del servidor deberas entrar a la ruta:
+
+http://IP_del_servidor_centralizador:5010/
+
+
+*NOTA Mientras este activo el API se podra visualizar y enviar información, en cuanto se cierre su ejecución, le servidor se apagará.
+

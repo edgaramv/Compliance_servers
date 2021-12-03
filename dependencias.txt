@@ -1,0 +1,127 @@
+
+
+Notas: Los .py se tiene que ejecutar en la ruta en la que se encuentren.
+
+
+1)
+
+Esta instalación se hace tanto en el servidor con agente y el centralizador:
+
+Istalación de paquetes/modulos:
+
+Script:
+
+sudo apt-get install python3
+
+Script:
+
+python3 instalacion_modulos.py
+
+
+
+***********************************************************************************************
+
+2)
+
+Instalación de base de datos
+
+En la terminal ejecutar los siguientes comandos:
+
+*****************************************************************************
+Script:
+sudo apt install mariadb-server mariadb-client
+
+
+*****************************************************************************
+
+Script:
+
+sudo mysql_secure_installation
+
+
+
+*En esta parte se haran algunas preguntas para la instalación:
+
+
+1.- Enter current password for root (enter for none): Presionar Enter
+
+2.- Setting the root password ensures that nobody can log into the MariaDB
+root user without the proper authorisation.
+
+Set root password? [Y/n]: Presionar N y Enter
+
+Remove Anonymous users? [Y/n]: Presionar Y y Enter
+
+Disable root login remotely? [Y/n]: Presionar N y Enter
+
+Remove test databases and access to it? [Y/n]: Presionar Y y Enter
+
+Reload privilege tables now? [Y/n]: Presionar Y y Enter
+
+
+*****************************************************************************
+
+
+Script:
+
+mariadb
+
+
+Dentro del manejador de base de datos:
+
+Script para crear base de datos:
+
+CREATE DATABASE compliance_server;
+USE DATABASE compliance_server;
+
+Script para crear tabla:
+
+CREATE TABLE tabla_servidores (
+
+Server_ID INT NOT NULL AUTO_INCREMENT,
+ip VARCHAR(100),
+procesador VARCHAR(100),
+procesos VARCHAR(100),
+usuarios VARCHAR(100),
+so VARCHAR(100),
+kernel VARCHAR(100),
+PRIMARY KEY(Server_ID)
+);
+
+
+
+Se crea un usuario para manejar las bases de datos:
+
+CREATE USER  'wpuser'@'localhost' IDENTIFIED BY '1270130';
+
+Se le dan los privilegios de conexión (En lugar del caracter "%" puede asignarsele una Ip o un segmento de IPs)
+
+GRANT ALL privileges ON 'compliance_server'.* TO 'wpuser'@%;
+
+FLUSH PRIVILEGES;
+
+
+***********************************************************************************************
+
+Para que MariaDB no se puede accesar desde otra terminal que no sea localhost por default
+hay que comentar
+
+la sentencia:
+
+bind-address            = 127.0.0.1
+
+Script con la ruta:
+
+nano /etc/mysql/mariadb.conf.d/50-server.cnf
+
+Se comenta poniendo un # delante de la sentencia.
+
+
+
+
+***********************************************************************************************
+
+Para la el script del agente se nec
+
+
+
