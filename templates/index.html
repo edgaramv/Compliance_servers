@@ -1,0 +1,33 @@
+{% block body %}
+
+  <div class="row">
+    <div class="col-md-7">
+      <table class="table table-striped table-hover table-bordered table-sm bg-white">
+        <thead>
+          <tr>
+            <td>IP </td>
+            <td>procesador </td>
+            <td>procesos </td>
+            <td>usuarios </td>
+            <td>so  </td>
+            <td>kernel </td>
+          </tr>
+        </thead>
+        <tbody>
+          {% for servidor in servidores %}
+          <tr>
+            <td>{{servidor.1}}</td>
+            <td>{{servidor.2}}</td>
+            <td>{{servidor.3}}</td>
+            <td>{{servidor.4}}</td>
+            <td>{{servidor.5}}</td>
+            <td>{{servidor.6}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
