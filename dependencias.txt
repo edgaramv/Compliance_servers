@@ -46,17 +46,17 @@ sudo mysql_secure_installation
 1.- Enter current password for root (enter for none): Presionar Enter
 
 2.- Setting the root password ensures that nobody can log into the MariaDB
-root user without the proper authorisation.
+root user without the proper authorisation: Presionar Enter
 
-Set root password? [Y/n]: Presionar N y Enter
+3.- Set root password? [Y/n]: Presionar N y Enter
 
-Remove Anonymous users? [Y/n]: Presionar Y y Enter
+4.- Remove Anonymous users? [Y/n]: Presionar Y y Enter
 
-Disable root login remotely? [Y/n]: Presionar N y Enter
+5.- Disable root login remotely? [Y/n]: Presionar N y Enter
 
-Remove test databases and access to it? [Y/n]: Presionar Y y Enter
+6.- Remove test databases and access to it? [Y/n]: Presionar Y y Enter
 
-Reload privilege tables now? [Y/n]: Presionar Y y Enter
+7.- Reload privilege tables now? [Y/n]: Presionar Y y Enter
 
 
 *****************************************************************************
@@ -104,9 +104,7 @@ FLUSH PRIVILEGES;
 ***********************************************************************************************
 
 Para que MariaDB no se puede accesar desde otra terminal que no sea localhost por default
-hay que comentar
-
-la sentencia:
+hay que comentar la sentencia:
 
 bind-address            = 127.0.0.1
 
@@ -121,7 +119,6 @@ Se comenta poniendo un # delante de la sentencia.
 
 ***********************************************************************************************
 
-Para la el script del agente se nec
 
 
 
